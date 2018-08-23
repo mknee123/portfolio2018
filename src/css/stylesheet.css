@@ -1,0 +1,52 @@
+html {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+body {
+  width:100%;
+  margin:0 auto;
+}
+
+header {
+  width:100%;
+  position: fixed;
+  background: black;
+  color: grey;
+  min-height: 80px;
+  display:flex;
+  align-items: center;
+}
+
+.navbar {
+  display:flex;
+  width: 78%;
+  justify-content: flex-end;
+  left: 0;
+  padding-right: 2rem;
+}
+.navbar span {
+  padding: 0 1rem;
+}
+span.left {
+  width:20%;
+  padding-left: 2rem;
+}
+
+main {
+  padding-top: 80px;
+}
+
+div#intro {
+	background:url('../img/intro_bg.jpg');
+	/*background-size:100%;*/
+	height: 340px;
+/*	display:block;
+	padding:0 !important;
+	margin:0;*/
+	/* Create the parallax scrolling effect */
+    background-attachment: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	transition: all ease 1s;
+}
