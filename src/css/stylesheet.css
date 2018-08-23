@@ -138,6 +138,7 @@ h1 {
 }
 h2 {
   font-size:2rem;
+  margin-bottom:1rem;
   font-weight: 700;
   color: #434445;
 }
@@ -159,11 +160,46 @@ p {
   color:#434445;
 }
 
-section#about {
-  padding: 2rem 0;
+a {
+  text-decoration: none;
 }
-#about h2 {
+
+section#about, section#work {
+  padding: 4rem 0;
+}
+#about h2, #work h2 {
   text-align: center;
+}
+
+.img-self {
+  max-width:200px;
+  width:100%;
+  margin:3rem auto 0;
+  display: block;
+  border-radius: 50%;
+}
+
+section#work {
+  background: #000;
+}
+section#work h2, section#work p {
+  color: grey;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.project {
+  background: #444;
+  max-width: 350px;
+  min-height:250px;
+  padding: 1.5rem;
+  margin: 1.5rem;
 }
 /**** MEDIA QUERIES ***/
 @media only screen and (max-width:2000px) and (min-width: 768px) {
