@@ -12,16 +12,26 @@
     <link href="./assets/css/stylesheet.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <span class="left">Miranda K.</span>
-      <nav class="navbar">
+    <div id="nav" class="sidebar-nav">
 
-        <span>About</span>
-        <span>Work</span>
-        <span>Contact</span>
-      </nav>
-    </header>
-    <main>
+      <header>
+        <span class="left">Miranda K.</span>
+        <img src="./assets/img/Miranda2017_sq.jpg" alt="Miranda Knee" class="img-self thin-margin-top" />
+        <nav class="navbar">
+          <span>About</span>
+          <span>Work</span>
+          <span>Contact</span>
+        </nav>
+      </header>
+
+    </div>
+
+    <main id="site-body">
+      <button id="nav-control" class="nav-btn"></button>
+      <!--
+      <span onclick="openNav()" id="open" class="nav-btn openbtn">&#9776;</span>
+      <a href="javascript:void(0)" id="close" class="nav-btn closebtn" onclick="closeNav()">&times;</a>
+    -->
       <!-- Introduction -->
       <section id="intro">
         <div class="overlay-heading">
@@ -38,7 +48,7 @@
       <!-- About Me -->
       <section id="about">
         <h2> Who am I? </h2>
-        <img src="./assets/img/Miranda2017_sq.jpg" alt="Miranda Knee" class="img-self thin-margin-top" />
+
         <div class="width-45">
           <p class="margin-top">I am a Web Designer and Developer. Based in Pittsburgh, I work at a non-profit where I create, build and maintain websites with help from an awesome communications team. I obtained my web degree at <a href="https://www.ptcollege.edu/" target="_blank">Pittsburgh Technical Institute</a> (now Pittsburgh Technical College). I really love what I do. My other interests include a good video or board game, stretching at a yoga class, anything Sci-Fi related, reading a good adventure or thriller series and trying find the best buffalo chicken pizza that Pittsburgh has to offer.</p>
         </div>
@@ -74,7 +84,22 @@
       </section>
 
     </main>
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+      $('#nav-control').on('click', function() {
+        $('#nav-control').toggleClass('open');
+        $('#site-body').toggleClass('mainClose');
+        $('#nav').toggleClass('navClose');
+      });
+    });
 
+
+
+    </script>
 
   </body>
 </html>

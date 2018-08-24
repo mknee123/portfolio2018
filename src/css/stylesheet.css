@@ -54,9 +54,7 @@ body {
   width:100%;
   margin:0 auto;
 }
-
-
-
+/*
 header {
   width:100%;
   position: fixed;
@@ -66,24 +64,65 @@ header {
   display:flex;
   align-items: center;
 }
+*/
 
+#nav-control:after {
+	content: "\00d7";
+	font-size: 2rem;
+}
+#nav-control.open:after {
+
+ content: "\203A";
+ font-size: 2rem;
+}
+.sidebar-nav {
+	height: 100%;
+	width:280px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	color: grey;
+	text-align: center;
+}
+
+ .navClose {
+	width:0px;
+}
+
+.nav-btn {
+	z-index: 1;
+	background: #111;
+	color: grey;
+	padding: 1rem;
+	position: fixed;
+	border: none;
+}
 .navbar {
   display:flex;
-  width: 78%;
+  flex-direction: column;
   justify-content: flex-end;
   left: 0;
-  padding-right: 2rem;
+	padding-top: 2rem;
 }
 .navbar span {
-  padding: 0 1rem;
+  padding: .5rem 1rem;
 }
 span.left {
-  width:20%;
-  padding-left: 2rem;
+  font-size:2rem;
+  padding: 0 2rem;
 }
 
 main {
-  padding-top: 80px;
+	margin-left: 280px;
+	transition: margin-left .5s;
+}
+.mainClose {
+	margin-left: 0px;
 }
 
 #intro {
@@ -204,6 +243,6 @@ section#work h2, section#work p {
 /**** MEDIA QUERIES ***/
 @media only screen and (max-width:2000px) and (min-width: 768px) {
   #intro {
-    height: 92vh;
+    height: 102vh;
   }
 }
