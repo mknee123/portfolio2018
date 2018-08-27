@@ -160,7 +160,7 @@ main {
 .btn:hover {
   background:rgba(225, 225, 225, .75);
 }
-a.aboutLink  {
+a.workLink  {
   color: white;
   text-decoration: none;
   transition: color ease .5s;
@@ -223,11 +223,11 @@ section#about, section#work {
   border-radius: 50%;
 }
 
-section#work {
-  /*
-	background: lightgrey;
-	*/
-
+section#about {
+	background: #282828;
+}
+section#about h2, section#about p {
+  color: #D3D3D3;
 }
 section#work h2, section#work p {
   /*color: grey;*/
@@ -237,40 +237,46 @@ section#work h2, section#work p {
 .wrapper {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 4rem 0;
+	max-width: 1200px;
+  margin: 4rem auto;
+
 }
 
 .project {
   /*background: #444;*/
-  max-width: 300px;
+	max-width: 300px;
+  min-width: 300px;
+	width:100%;
   min-height:250px;
-  padding: 1.5rem;
-  margin: 1.5rem;
+  /*padding: 1.5rem;*/
+  margin: 2rem 2rem;
 	position: relative;
 	flex-grow: 1;
-	flex-shrink: 1;
+	display: flex;
+	align-items: center;
+
 }
 .project img {
-	max-width: 250px;
-	min-width: 200px;
+	max-width: 240px;
+	max-height: 180px;
 	margin: 0 auto;
 	width: 100%;
-	display:flex;
+	display:block;
 }
 .project-info {
-	padding: 0 1em;
-	background: #fff;
+	padding: 1em;
+	background: #F5F5F5;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	width: 100%;
 	top: 0;
 	justify-content: flex-start;
-
 	opacity: 0;
-	transition: all ease 2.5s;
+	transition: all ease 1s;
 }
 .project-info p {
 	font-size: .8rem;
