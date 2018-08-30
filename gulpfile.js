@@ -80,13 +80,7 @@ gulp.task('css', function() {
   * Watch asset files for changes. First runs default task before starting watches
   */
   gulp.task('watch', function() {
-          browserSync.init({
-            server: {
-                baseDir: "./web/"
-            }
-          });
-
-          gulp.run('default');
+          /*gulp.run('default');*/
 
           gulp.watch('src/css/**/*.css', function(event) {
               console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -103,4 +97,9 @@ gulp.task('css', function() {
               gulp.run('images');
           });
           gulp.watch("web/*.html").on("change", reload);
+          browserSync.init({
+            server: {
+                baseDir: "./web/"
+            }
+          });
   });

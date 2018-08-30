@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Miranda - Web Developer</title>
     <!--CSS Reset -->
     <link href="./assets/css/reset.css" type="text/css" rel="stylesheet" />
@@ -14,29 +15,32 @@
   <body>
     <div id="nav" class="sidebar-nav">
       <header>
-        <span class="left">I'm Miranda.</span>
+
         <img src="./assets/img/Miranda2017_sq.jpg" alt="Miranda Knee" class="img-self thin-margin-top" />
-        <span><h4>WEB DEVELOPER</h4></span>
+        <span class="left">Miranda K.</span>
+        <span><h5>web developer</h5></span>
         <nav class="navbar">
           <span><h5><strong><a href="#work">Work.</a></strong></h5></span>
           <span><h5><strong><a href="#about">About.</a></strong></h5></span>
           <span><h5><strong><a href="#contact">Connect.</a></strong></h5></span>
           <span class="info">
             <a href="mailto:mknee123@gmail.com"><img alt="email icon" src="./assets/img/email_grey.svg" width="25"></a>
-            <a href="#"><img alt="resume icon" src="./assets/img/resume_grey.svg" width="25"> </a>
-            <a href="#"><img alt="linkedin icon" src="./assets/img/linkdin_grey.svg" width="23"> </a>
-            <a href="#"><img alt="github icon" src="./assets/img/github_grey.svg" width="23"> </a>
+            <a href="./assets/MirandaKnee_Resume2018.pdf" target="_blank"><img alt="resume icon" src="./assets/img/resume_grey.svg" width="25"> </a>
+            <a href="https://www.linkedin.com/in/mirandaknee/" target="_blank"><img alt="linkedin icon" src="./assets/img/linkdin_grey.svg" width="23"> </a>
+            <a href="https://github.com/mknee123" target="_blank"><img alt="github icon" src="./assets/img/github_grey.svg" width="23"> </a>
           </span>
-          <p class="text-muted"> © copyright and all that good stuff 2018</p>
+          <p class="text-muted mobile-hide"> © copyright and all that good stuff 2018</p>
           </p>
         </nav>
-
       </header>
-
-
-
     </div>
-
+    <nav id="nav-mobile">
+      <div class="navbar-mobile">
+        <span><strong><a href="#work">Work.</a></strong></span>
+        <span><strong><a href="#about">About.</a></strong></span>
+        <span><strong><a href="#contact">Connect.</a></strong></span>
+      </div>
+    </nav>
     <main id="site-body">
       <button id="nav-control" class="nav-btn"></button>
       <!--
@@ -56,7 +60,6 @@
           </a>
         </div>
       </section>
-
       <!-- Work -->
       <section id="work">
         <h2> What's my Experience? </h2>
@@ -81,7 +84,17 @@
               <h4>2017 Annual Report</h4>
               <p><strong>Goal:</strong> Recreate SquareSpace site to decrease annual costs.</p>
               <p><strong>Solution:</strong> Built site using HTML5, CSS3, JQuery and Gulp to create a responsive and optimized website.</p>
-              <p><strong>Site:</strong> <a href="https://annualreport2017.alleghenyconference.org" target="_blank" title="2017 Annual Report">annualreport2017.alleghenyconference.org</a></p>
+              <p><strong>Site:</strong> <a href="http://annualreport2017.alleghenyconference.org" target="_blank" title="2017 Annual Report">annualreport2017.alleghenyconference.org</a></p>
+            </div>
+          </div>
+          <!-- Great Lakes Metro Chambers Coalition -->
+          <div class="project">
+            <img src="./assets/img/GLMCC_logo_2LINES.svg" alt="Great Lakes Metro Chambers Coalition" />
+            <div class="project-info">
+              <h4>Great Lakes Metro Chambers Coalition</h4>
+              <p><strong>Goal:</strong> Redesign and development an updated website within a tight timeline and minimal costs to client.</p>
+              <p><strong>Solution:</strong> Used a bootstrap framework to deliver a mobile friendly website within given timeline.</p>
+              <p><strong>Site:</strong> <a href="http://greatlakesmetrochambers.com/" target="_blank" title="Great Lakes Metro Chambers Coalition">greatlakesmetrochambers.com</a></p>
             </div>
           </div>
           <!-- Clarity and Wellness PGH -->
@@ -150,14 +163,13 @@
             <img src="./assets/img/PTC_logo.jpeg" alt="Pittsburgh Technical College" />
             <div class="project-info">
               <h4>Pittsburgh Technical College</h4>
-              <p><strong>Goal:</strong> Provide banner images and UX/UI consultating.</p>
-              <p><strong>Solution:</strong> Collected and optimized banner images for new site launch. Provided UI/UX consultating to create a more appealing experience for users and increase leads.</p>
+              <p><strong>Goal:</strong> Assist marketing team with prepping new website launch to be ready for name change release of Pittsburgh Technical Institute to Pittsburgh Technical College.</p>
+              <p><strong>Solution:</strong> Collect and optimized images for use on new site. Provide UI/UX consultating to create a more appealing experience for users.</p>
               <p><strong>Site:</strong> <a href="https://www.ptcollege.edu/" target="_blank" title="Pittsburgh Technical College">ptcollege.edu</a></p>
             </div>
           </div>
         </div>
       </section>
-
       <!-- About Me -->
       <section id="about">
         <h2> Who am I? </h2>
@@ -189,10 +201,25 @@
       <section id="contact">
         <h2>Need to Know More?</h2>
         <div class="width-45 medium-margin-bottom">
-          <p class="margin-top">If you have questions or would like to simply say,<strong> "Hey"</strong>, a good address to contact me at is <a href="mailto:mknee123@gmail.com">mknee123@gmail</a>.</p>
+          <p class="margin-top">If you have questions or would like to talk web, a good address to contact me at is <a href="mailto:mknee123@gmail.com">mknee123@gmail</a>. You can also visit my <a href="https://github.com/mknee123" target="_blank">GitHub page</a> to view some of my work.</p>
         </div>
       </section>
     </main>
+    <footer class="desktop-hidden">
+      <nav class="navbar">
+        <span><h5><strong><a href="#work">Work.</a></strong></h5></span>
+        <span><h5><strong><a href="#about">About.</a></strong></h5></span>
+        <span><h5><strong><a href="#contact">Connect.</a></strong></h5></span>
+        <span class="info">
+          <a href="mailto:mknee123@gmail.com"><img alt="email icon" src="./assets/img/email_grey.svg" width="25"></a>
+          <a href="./assets/MirandaKnee_Resume2018.pdf" target="_blank"><img alt="resume icon" src="./assets/img/resume_grey.svg" width="25"> </a>
+          <a href="https://www.linkedin.com/in/mirandaknee/" target="_blank"><img alt="linkedin icon" src="./assets/img/linkdin_grey.svg" width="23"> </a>
+          <a href="https://github.com/mknee123" target="_blank"><img alt="github icon" src="./assets/img/github_grey.svg" width="23"> </a>
+        </span>
+        <p class="text-muted"> © copyright and all that good stuff 2018</p>
+        </p>
+      </nav>
+    </footer>
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -206,6 +233,17 @@
       });
     });
     </script>
+    <script>
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
 
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("nav-mobile").style.top = "0";
+      } else {
+        document.getElementById("nav-mobile").style.top = "-50px";
+      }
+    }
+    </script>
   </body>
 </html>
