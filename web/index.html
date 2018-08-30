@@ -34,13 +34,15 @@
         </nav>
       </header>
     </div>
-    <nav id="nav-mobile">
-      <div class="navbar-mobile">
-        <span><strong><a href="#work">Work.</a></strong></span>
-        <span><strong><a href="#about">About.</a></strong></span>
-        <span><strong><a href="#contact">Connect.</a></strong></span>
-      </div>
-    </nav>
+    <div class="desktop-hidden">
+      <nav id="nav-mobile">
+        <div class="navbar-mobile">
+          <span><strong><a href="#work">Work.</a></strong></span>
+          <span><strong><a href="#about">About.</a></strong></span>
+          <span><strong><a href="#contact">Connect.</a></strong></span>
+        </div>
+      </nav>
+    </div>
     <main id="site-body">
       <button id="nav-control" class="nav-btn"></button>
       <!--
@@ -158,7 +160,7 @@
             </div>
           </div>
 
-          <!-- PTC Site -->
+          <!-- PTC Site
           <div class="project">
             <img src="./assets/img/PTC_logo.jpeg" alt="Pittsburgh Technical College" />
             <div class="project-info">
@@ -167,7 +169,7 @@
               <p><strong>Solution:</strong> Collect and optimized images for use on new site. Provide UI/UX consultating to create a more appealing experience for users.</p>
               <p><strong>Site:</strong> <a href="https://www.ptcollege.edu/" target="_blank" title="Pittsburgh Technical College">ptcollege.edu</a></p>
             </div>
-          </div>
+          </div>-->
         </div>
       </section>
       <!-- About Me -->
@@ -238,7 +240,7 @@
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         document.getElementById("nav-mobile").style.top = "0";
       } else {
         document.getElementById("nav-mobile").style.top = "-50px";
