@@ -4,3 +4,4 @@ logs
 _notes
 web.zip
 web/public_html/
+package-lock.json
