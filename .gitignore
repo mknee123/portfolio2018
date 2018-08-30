@@ -2,3 +2,5 @@ node_modules
 logs
 .DS_Store
 _notes
+web.zip
+web/public_html/
