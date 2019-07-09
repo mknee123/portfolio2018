@@ -82,7 +82,7 @@ header {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
+	background-color: #242828;
 	overflow: scroll;
 	transition: 0.5s;
 	padding: 60px 0 0 0;
@@ -100,7 +100,7 @@ header {
 }
 .nav-btn {
 	z-index: 1;
-	background: #111;
+	background:#242828;
 	color: grey;
 	padding: 1rem;
 	position: fixed;
@@ -148,7 +148,7 @@ span.left {
 }
 
 #nav-mobile {
-  background-color: #111;
+  background-color:#242828;
   position: fixed;
   top: -50px;
   width: 100%;
@@ -268,6 +268,9 @@ strong {
 section#about, section#work, section#contact {
   padding: 4rem 0;
 }
+section#work {
+	background: #f8f8f8;
+}
 #about h2, #work h2, #contact h2 {
   text-align: center;
 }
@@ -290,7 +293,7 @@ section#work h2, section#work p {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 	max-width: 1200px;
   margin: 4rem auto;
 
@@ -302,33 +305,43 @@ section#work h2, section#work p {
   min-width: 300px;
 	width:100%;
   min-height:250px;
-  /*padding: 1.5rem;*/
-  margin: 2rem 2rem;
-	position: relative;
+  padding: 1rem;
+  margin: 2rem 1.25rem;
+	/* position: relative; */
 	flex-grow: 1;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-
 }
-.project img {
-	max-width: 240px;
-	max-height: 180px;
+.project .img-container {
+	height: 160px;
+	display: flex;
+	align-items: center;
+}
+.img-container img {
+	max-width: 250px;
+	max-height: 110px;
 	margin: 0 auto;
 	width: 100%;
 	display:block;
 }
 .project-info {
-	padding: 1em;
-	background: #F5F5F5;
-	position: absolute;
+	padding: 1em 0;
+	/*background: #f8f8f8;
+	 position: absolute; */
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	/* height: 100%; */
 	width: 100%;
 	top: 0;
 	justify-content: flex-start;
-	opacity: 0;
+	/* opacity: 0; */
+	opacity: 1;
 	transition: all ease 1s;
+	border-top: 1px solid #434445;
+}
+.project-info h4 {
+	color: #434445;
 }
 .project-info p {
 	font-size: .8rem;
