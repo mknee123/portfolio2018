@@ -77,23 +77,26 @@ header {
 }
 .sidebar-nav {
 	height: 100%;
-	width:280px;
+	max-width:280px;
+	width: 100%;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
 	background-color: #242828;
 	overflow: scroll;
-	transition: 0.5s;
+	transition: all 0.5s ease;
 	padding: 60px 0 0 0;
 	color: grey;
 	text-align: left;
+	opacity: 1;
 }
 .sidebar-nav a {
 	color: #00D5FF;
 }
  .navClose {
-		width:0px;
+	width:0px;
+	opacity: 0;
 }
 header {
 	padding: 0 2rem;
@@ -106,7 +109,7 @@ header {
 	position: fixed;
 	border: none;
 	margin-left: -5em;
-	transition: margin-left ease .5s;
+	transition: margin-left 0.5s ease;
 }
 .nav-btn:focus {
 	outline: none;
@@ -119,7 +122,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   left: 0;
-	padding: 2rem 0;
+  padding: 2rem 0;
 }
 .navbar span {
   padding:  0;
@@ -148,7 +151,7 @@ span.left {
 }
 
 #nav-mobile {
-  background-color:#242828;
+  background-color:#282828;
   position: fixed;
   top: -50px;
   width: 100%;
@@ -166,7 +169,7 @@ span.left {
 	}
 main {
 	margin-left: 280px;
-	transition: margin-left .5s;
+	transition: margin-left .5s ease;
 }
 .mainClose {
 	margin-left: 0px;
@@ -260,6 +263,11 @@ p {
 
 a {
   text-decoration: none;
+  color: rgb(3, 117, 184);
+  transition: all 1s ease;
+}
+a:hover {
+	color: #00D5FF;
 }
 strong {
 	font-weight: bolder;
@@ -338,16 +346,21 @@ section#work h2, section#work p {
 	/* opacity: 0; */
 	opacity: 1;
 	transition: all ease 1s;
-	border-top: 1px solid #434445;
+	border-top: 1px solid lightgrey;
 }
 .project-info h4 {
 	color: #434445;
+	transition: all ease 1s;
 }
 .project-info p {
 	font-size: .8rem;
 }
-.project:hover .project-info {
-	opacity: 1;
+.project:hover .project-info h4 {
+	color:grey;
+}
+
+.project:hover .project-info a {
+	color: #00D5FF;
 }
 
 .about-wrapper {
