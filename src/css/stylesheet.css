@@ -83,7 +83,7 @@ header {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #242828;
+	background-color: #282828;
 	overflow: scroll;
 	transition: all 0.5s ease;
 	padding: 60px 0 0 0;
@@ -103,7 +103,7 @@ header {
 }
 .nav-btn {
 	z-index: 1;
-	background:#242828;
+	background:#282828;
 	color: grey;
 	padding: 1rem;
 	position: fixed;
@@ -157,7 +157,7 @@ span.left {
   width: 100%;
   display: block;
   transition: top 0.3s;
-	z-index: 3;
+  z-index: 3;
 }
 
 #nav-mobile a {
