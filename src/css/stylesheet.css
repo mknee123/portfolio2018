@@ -77,7 +77,6 @@ header {
 }
 .sidebar-nav {
 	height: 100%;
-	max-width:280px;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
@@ -89,17 +88,22 @@ header {
 	padding: 60px 0 0 0;
 	color: grey;
 	text-align: left;
-	opacity: 1;
+	/* opacity: 1; */
 }
 .sidebar-nav a {
 	color: #00D5FF;
 }
  .navClose {
 	width:0px;
+	/* opacity: 0; */
+}
+.navClose header {
 	opacity: 0;
 }
 header {
 	padding: 0 2rem;
+	opacity: 1;
+	transition: all .5s ease;
 }
 .nav-btn {
 	z-index: 1;
@@ -187,7 +191,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	transition: all ease 1s;
+	transition: all .5s ease;
 }
 
 .overlay-heading {
@@ -396,6 +400,9 @@ footer p {
 	#intro {
     height: 103vh;
 	}
+	.sidebar-nav {
+		max-width: 280px;
+	}
 }
 @media screen and (min-width: 1280px) and (max-width: 1600px) {
 	#intro {
@@ -403,7 +410,10 @@ footer p {
 	}
 	.width-45 {
 	   max-width: 55%;
-		}
+	}
+	.sidebar-nav {
+		max-width: 280px;
+	}
 
 }
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
@@ -413,6 +423,9 @@ footer p {
 	.width-45 {
     max-width: 65%;
 	}
+	.sidebar-nav {
+		max-width: 280px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -421,6 +434,9 @@ footer p {
 	}
 	.width-45 {
     max-width: 75%;
+	}
+	.sidebar-nav {
+		max-width: 280px;
 	}
 }
 
@@ -458,6 +474,7 @@ footer p {
 		position: relative;
 
 	}
+
 	.navClose {
 		width:100%;
 		height: 51px;
