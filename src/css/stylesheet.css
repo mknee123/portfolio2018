@@ -83,7 +83,7 @@ header {
 	top: 0;
 	left: 0;
 	background-color: #282828;
-	overflow: scroll;
+	overflow: hidden;
 	transition: all 0.5s ease;
 	padding: 60px 0 0 0;
 	color: grey;

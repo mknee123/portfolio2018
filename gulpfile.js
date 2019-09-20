@@ -9,16 +9,11 @@ var gulp = require('gulp'),
 
 /**Development Server **/
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
+// var reload = browserSync.reload;
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        proxy: 'http://localhost',
-        server: {
-          baseDir: "./web/*html"
-        }
-    });
-});
+function reload() {
+    browserSync.reload();
+}
 
 /***
 TASKS
@@ -27,34 +22,33 @@ TASKS
 /**
  * Minify and combine CSS files, including Reset
 */
-gulp.task('css-reset', function() {
-    gulp.src([
-            'src/css/reset.css'
-        ])
-        .pipe(minifyCSS())
-        .pipe(concat('reset.css'))
-        .pipe(gulp.dest('web/assets/css'));
-});
-gulp.task('css', function() {
-    gulp.src([
-            'src/css/stylesheet.css'
-        ])
-        .pipe(minifyCSS())
-        .pipe(concat('stylesheet.css'))
-        .pipe(gulp.dest('web/assets/css'));
-});
+function style() {
+    return gulp.src('src/css/stylesheet.css')
+    .pipe(minifyCSS())
+    .pipe(concat('stylesheet.css'))
+    .pipe(gulp.dest('web/assets/css'))
+    .pipe(browserSync.stream());
+}
 
-/**
- * Minify and combine JS files, including jQuery and Bootstrap
- */
- gulp.task('js', function() {
-     gulp.src([
-             'src/js/**/*.js'
-         ])
-         .pipe(uglify())
-         .pipe(concat('script.js'))
-         .pipe(gulp.dest('web/assets/js'));
- });
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: './web'
+        }
+    });
+
+    gulp.watch('src/css/stylesheet.css', style);
+    gulp.watch('./*html', reload);
+}
+
+exports.watch = watch;
+
+exports.style = style;
+
+var build = gulp.parallel(style, watch);
+
+gulp.task('build', build);
+gulp.task('default', build);
 
  /**
   * Copy images from source to distributable
@@ -62,44 +56,14 @@ gulp.task('css', function() {
   * This could be extended to create different
   * quality versions of images, or an image sprite
   */
- gulp.task('images', function() {
-     gulp.src([
-             'src/img/**/*'
-         ])
-         .pipe(gulp.dest('web/assets/img'));
- });
+//  gulp.task('images', function() {
+//      gulp.src([
+//              'src/img/**/*'
+//          ])
+//          .pipe(gulp.dest('web/assets/img'));
+//  });
 
  /**
   * The default gulp task
   */
- gulp.task('default', function() {
-     gulp.run('css-reset', 'css', 'js', 'images');
- });
 
- /**
-  * Watch asset files for changes. First runs default task before starting watches
-  */
-  gulp.task('watch', function() {
-          /*gulp.run('default');*/
-
-          gulp.watch('src/css/**/*.css', function(event) {
-              console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-              gulp.run('css');
-          });
-
-          gulp.watch('src/js/**/*.js', function(event) {
-              console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-              gulp.run('js');
-          });
-
-          gulp.watch('src/images/**/*', function(event) {
-              console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-              gulp.run('images');
-          });
-          gulp.watch("web/*.html").on("change", reload);
-          browserSync.init({
-            server: {
-                baseDir: "./web/"
-            }
-          });
-  });
