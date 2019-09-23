@@ -94,7 +94,8 @@ header {
 	color: #00D5FF;
 }
  .navClose {
-	width:0px;
+	/* width:0px; */
+	transform: translateX(-260px);
 	/* opacity: 0; */
 }
 .navClose header {
@@ -402,6 +403,7 @@ footer p {
 	}
 	.sidebar-nav {
 		max-width: 280px;
+		transform: translateX(0px);
 	}
 }
 @media screen and (min-width: 1280px) and (max-width: 1600px) {
